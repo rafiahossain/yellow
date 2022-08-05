@@ -1,0 +1,52 @@
+package com.example.yellow;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    //Variables
+    private static int SPLASH_SCREEN = 5000;
+    Animation topAnim, bottomAnim;
+    ImageView logo;
+    TextView banner, slogan;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_main);
+
+        //Animations
+        topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
+
+        //Hook xml items
+        logo = findViewById(R.id.logo);
+        banner = findViewById(R.id.banner);
+        slogan = findViewById(R.id.slogan);
+
+        //Assign animations to items
+        logo.setAnimation(topAnim);
+        banner.setAnimation(bottomAnim);
+        slogan.setAnimation(bottomAnim);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, MyLoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }, SPLASH_SCREEN);
+
+    }
+}

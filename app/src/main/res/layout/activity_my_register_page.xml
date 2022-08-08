@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mybuttonpink"
-    tools:context=".MyLoginActivity">
+    tools:context=".MyRegisterPage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,89 +15,121 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             android:padding="20dp">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginTop="100dp"
                 android:src="@drawable/logotemp" />
 
             <TextView
-                android:id="@+id/banner1"
+                android:id="@+id/banner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:fontFamily="@font/rammetto_one"
-                android:gravity="center_horizontal"
                 android:text="Expecting"
                 android:textColor="@color/mybuttonpinkdark"
                 android:textAlignment="center"
                 android:textSize="50sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
 
             <TextView
-                android:id="@+id/bannerdescript1"
+                android:id="@+id/bannerdescript"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:ems="10"
                 android:fontFamily="sans-serif-light"
-                android:text="Your Dental Health Starts Here"
+                android:text="Your Dental Health Journey"
                 android:textColor="@color/mybuttonpinkdark"
                 android:textAlignment="center"
                 android:textSize="20sp"
+                android:textStyle="italic"
                 android:gravity="center_horizontal" />
 
             <EditText
-                android:id="@+id/email1"
+                android:id="@+id/fullname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:ems="10"
-                android:hint="Email..."
+                android:hint="Full name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="Email"
                 android:inputType="textEmailAddress" />
 
             <EditText
-                android:id="@+id/password1"
+                android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:ems="10"
-                android:hint="Password..."
-                android:inputType="textPassword"/>
+                android:hint="User Name"
+                android:inputType="textPersonName" />
 
-            <Button
-                android:id="@+id/forgotpass"
-                style="?android:attr/borderlessButtonStyle"
+            <EditText
+                android:id="@+id/password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="forgotpass"
-                android:text="Forgot Password?"
-                android:textColor="@color/mybuttonpinkdark"
-                app:backgroundTint="#00F9C2E2" />
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword" />
 
-            <Button
-                android:id="@+id/btnlogin1"
+            <EditText
+                android:id="@+id/confirmpassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/startDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Start date of pregnancy" />
+
+            <Button
+                android:id="@+id/btnregister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/rammetto_one"
-                android:onClick="login"
-                android:text="Login"
+                android:onClick="register"
+                android:text="Register"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/mybuttonpinkdark" />
 
             <Button
-                android:id="@+id/btnregister1"
+                android:id="@+id/btnlogin"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="toregister"
-                android:text="Create new account"
+                android:onClick="tologin"
+                android:text="Proceed to Login"
                 android:textColor="@color/mybuttonpinkdark"
-                app:backgroundTint="#00F9C2E2" />
-
+                app:backgroundTint="#00F9C2E2"
+                app:rippleColor="#00FFFFFF" />
 
         </LinearLayout>
 
@@ -115,5 +147,6 @@
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </ScrollView>

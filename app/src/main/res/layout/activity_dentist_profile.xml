@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DentistProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@color/mybuttonpink"
+            android:padding="20dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/myclear"
+                android:tooltipText="Logout"
+                android:onClick="logout"
+                android:src="@android:drawable/ic_lock_power_off" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logotemp" />
+
+            <TextView
+                android:id="@+id/fullname_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/logo"
+                android:fontFamily="@font/rammetto_one"
+                android:includeFontPadding="false"
+                android:textColor="@color/mybuttonpinkdark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/email_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/fullname_field"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/mybuttonpinkdark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/username_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/email_field"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/mybuttonpinkdark"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-100dp"
+            android:padding="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:onClick="chatList"
+                app:cardBackgroundColor="@color/mybuttonpink"
+                app:cardElevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_chat" />
+
+                    <TextView
+                        android:id="@+id/chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/rammetto_one"
+                        android:text="Chat"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/chat_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/chat"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="User Questions"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:onClick="uploadTips"
+                app:cardBackgroundColor="@color/mybuttonpink"
+                app:cardElevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_tips" />
+
+                    <TextView
+                        android:id="@+id/tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/rammetto_one"
+                        android:gravity="center_horizontal"
+                        android:text="Upload"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tip_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tip"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="Video Tips"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

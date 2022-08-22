@@ -60,7 +60,7 @@ public class MyRegisterPage extends AppCompatActivity {
             }
 
             private void updateCalendar() {
-                String Format = "MM/dd/yy";
+                String Format = "dd/MM/yy";
                 SimpleDateFormat sdf = new SimpleDateFormat(Format, Locale.US);
                 startDate.setText(sdf.format(calendar.getTime()));
             }

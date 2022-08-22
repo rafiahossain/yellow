@@ -2,12 +2,13 @@ package com.example.yellow;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.google.android.material.textfield.TextInputLayout;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -16,16 +17,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-public class UserProfile extends AppCompatActivity {
+public class DentistProfile extends AppCompatActivity {
 
     //Variables
-    TextInputLayout fullname, trimester, currentDate, startDate, email, username;
-    TextView fullnameLabel, usernameLabel;
+    TextView fullnameLabel, emailLabel, usernameLabel;
 
     //Firebase
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -36,41 +31,19 @@ public class UserProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
+        setContentView(R.layout.activity_dentist_profile);
 
         //Textview
         fullnameLabel = findViewById(R.id.fullname_field);
         usernameLabel = findViewById(R.id.username_field);
-
-        //TextInputLayout
-        fullname = findViewById(R.id.full_name_profile);
-        trimester = findViewById(R.id.trimester_profile);
-        currentDate = findViewById(R.id.current_date_profile);
-        startDate = findViewById(R.id.start_date_profile);
-        email = findViewById(R.id.email_profile);
-        username = findViewById(R.id.username_profile);
-
-        //set simple date format varible and set current date
-        String Format = "dd/MM/yy";
-        SimpleDateFormat sdf = new SimpleDateFormat(Format, Locale.US);
-        Date dateNow = new Date();
-        currentDate.getEditText().setText(sdf.format(dateNow));
-
-        //Calculate Trimester
-        String dateStartTemp = String.valueOf(startDate.getEditText().getText());
-        try {
-            Date dateStart = sdf.parse(dateStartTemp);
-            trimester.getEditText().setText((CharSequence) dateStart);
-        } catch (ParseException e) {
-            e.printStackTrace();
-            trimester.getEditText().setText("Error");
-        }
+        emailLabel = findViewById(R.id.email_field);
 
         //Method to show all data
         showAllUserData();
     }
 
     private void showAllUserData() {
+
         DatabaseReference reference = database.getReference("Users");
         //get data from real time database
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -82,38 +55,31 @@ public class UserProfile extends AppCompatActivity {
                     String name = userProfile.name;
                     String em = userProfile.emailadd;
                     String un = userProfile.username;
-                    String sd = userProfile.startDate;
 
                     fullnameLabel.setText(name);
-                    usernameLabel.setText(un);
-
-                    fullname.getEditText().setText(name);
-                    startDate.getEditText().setText(sd);
-                    email.getEditText().setText(em);
-                    username.getEditText().setText(un);
+                    emailLabel.setText("Email: " + em);
+                    usernameLabel.setText("Username: " + un);
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(UserProfile.this, "Something went wrong!", Toast.LENGTH_LONG).show();
+                Toast.makeText(DentistProfile.this, "Something went wrong!", Toast.LENGTH_LONG).show();
             }
         });
-
     }
-
 
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
-        Intent i = new Intent(getApplicationContext(), MyLoginActivity.class);
+        Intent i = new Intent(DentistProfile.this, MyLoginActivity.class);
         startActivity(i);
     }
 
-    public void chat(View view) {
+    public void chatList(View view) {
 
     }
 
-    public void tips(View view) {
+    public void uploadTips(View view) {
 
     }
 

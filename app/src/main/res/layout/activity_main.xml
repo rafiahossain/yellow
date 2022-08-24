@@ -45,15 +45,15 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:fontFamily="sans-serif-light"
-        android:text="Your dental health starts here"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal"
+        android:text="Begin Your Dental Health Journey"
         android:textAlignment="center"
         android:textColor="@color/mybuttonpinkdark"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/banner"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/banner" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

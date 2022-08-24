@@ -44,13 +44,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:ems="10"
-                android:fontFamily="sans-serif-light"
-                android:text="Your Dental Health Journey"
-                android:textColor="@color/mybuttonpinkdark"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center_horizontal"
+                android:text="Sign Up To Create New Account"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                android:gravity="center_horizontal" />
+                android:textColor="@color/mybuttonpinkdark"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/fullname"

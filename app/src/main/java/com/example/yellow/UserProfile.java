@@ -107,6 +107,7 @@ public class UserProfile extends AppCompatActivity {
         FirebaseAuth.getInstance().signOut();
         Intent i = new Intent(getApplicationContext(), MyLoginActivity.class);
         startActivity(i);
+        finish();
     }
 
     public void chat(View view) {

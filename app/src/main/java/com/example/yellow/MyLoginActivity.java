@@ -92,9 +92,11 @@ public class MyLoginActivity extends AppCompatActivity {
                                     if (!(un.equals(dentistUN))){
                                         Intent i = new Intent(MyLoginActivity.this, UserProfile.class);
                                         startActivity(i);
+                                        finish();
                                     } else {
                                         Intent i = new Intent(MyLoginActivity.this, DentistProfile.class);
                                         startActivity(i);
+                                        finish();
                                     }
                                     progressBar.setVisibility(View.GONE);
                                     Toast.makeText(MyLoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();

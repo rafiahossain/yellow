@@ -57,8 +57,8 @@ public class DentistProfile extends AppCompatActivity {
                     String un = userProfile.username;
 
                     fullnameLabel.setText(name);
-                    emailLabel.setText("Email: " + em);
-                    usernameLabel.setText("Username: " + un);
+                    emailLabel.setText(em);
+                    usernameLabel.setText(un);
                 }
             }
 
@@ -73,6 +73,7 @@ public class DentistProfile extends AppCompatActivity {
         FirebaseAuth.getInstance().signOut();
         Intent i = new Intent(DentistProfile.this, MyLoginActivity.class);
         startActivity(i);
+        finish();
     }
 
     public void chatList(View view) {

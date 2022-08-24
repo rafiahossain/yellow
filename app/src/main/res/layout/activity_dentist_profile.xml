@@ -17,14 +17,17 @@
             android:background="@color/mybuttonpink"
             android:padding="20dp">
 
-            <ImageButton
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:background="@color/myclear"
                 android:tooltipText="Logout"
                 android:onClick="logout"
-                android:src="@android:drawable/ic_lock_power_off" />
+                android:text="Logout"
+                android:textColor="@color/mybuttonpinkdark"
+                android:drawableRight="@android:drawable/ic_lock_power_off"
+                android:drawableTint="@color/mybuttonpinkdark"/>
 
             <ImageView
                 android:id="@+id/logo"
@@ -44,7 +47,7 @@
                 android:fontFamily="@font/rammetto_one"
                 android:includeFontPadding="false"
                 android:textColor="@color/mybuttonpinkdark"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/email_field"
@@ -55,7 +58,10 @@
                 android:layout_marginLeft="10dp"
                 android:includeFontPadding="false"
                 android:textColor="@color/mybuttonpinkdark"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/ic_mail"
+                android:drawableTint="@color/mybuttonpinkdark"
+                android:drawablePadding="10dp"/>
 
             <TextView
                 android:id="@+id/username_field"
@@ -66,7 +72,10 @@
                 android:layout_marginLeft="10dp"
                 android:includeFontPadding="false"
                 android:textColor="@color/mybuttonpinkdark"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/ic_profile"
+                android:drawableTint="@color/mybuttonpinkdark"
+                android:drawablePadding="10dp"/>
 
         </RelativeLayout>
 

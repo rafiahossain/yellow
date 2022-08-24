@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     //Variables
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 2000;
     Animation topAnim, bottomAnim;
     ImageView logo;
     TextView banner, slogan;

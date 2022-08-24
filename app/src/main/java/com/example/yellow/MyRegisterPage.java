@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
@@ -126,7 +127,9 @@ public class MyRegisterPage extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    UserClass u = new UserClass(name, emx, user, stDate, pass);
+                                    FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                                    String userID = firebaseUser.getUid();
+                                    UserClass u = new UserClass(userID, name, emx, user, stDate, pass);
                                     FirebaseDatabase.getInstance().getReference("Users")
                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                             .setValue(u).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -135,7 +138,7 @@ public class MyRegisterPage extends AppCompatActivity {
                                             if (task.isSuccessful()) {
                                                 progressBar.setVisibility(View.GONE);
                                                 Toast.makeText(MyRegisterPage.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                                Intent i = new Intent(getApplicationContext(), MyLoginActivity.class);
+                                                Intent i = new Intent(MyRegisterPage.this, MyLoginActivity.class);
                                                 startActivity(i);
                                             } else {
                                                 progressBar.setVisibility(View.GONE);

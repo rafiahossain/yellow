@@ -2,16 +2,25 @@ package com.example.yellow;
 
 public class UserClass {
 
-    public String name, emailadd, username, startDate, password;
+    public String id, name, emailadd, username, startDate, password;
 
     public UserClass() {}
 
-    public UserClass(String name, String emailadd, String username, String startDate, String password) {
+    public UserClass(String id, String name, String emailadd, String username, String startDate, String password) {
+        this.id = id;
         this.name = name;
         this.emailadd = emailadd;
         this.username = username;
         this.startDate = startDate;
         this.password = password;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

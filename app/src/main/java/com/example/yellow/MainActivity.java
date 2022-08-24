@@ -60,30 +60,16 @@ public class MainActivity extends AppCompatActivity {
                 //check if user is logged in
                 if (user != null){
                     String userID = user.getUid();
-                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(userID);
-
-                    reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            UserClass userProfile = snapshot.getValue(UserClass.class);
-                            String un = userProfile.username;
-                            String dentistUN = "yourappdentist";
-                            if (!(un.equals(dentistUN))){
-                                Intent i = new Intent(MainActivity.this, UserProfile.class);
-                                startActivity(i);
-                                finish();
-                            } else {
-                                Intent i = new Intent(MainActivity.this, DentistProfile.class);
-                                startActivity(i);
-                                finish();
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-                            Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    String dentistID = "ARZWrJlFEgToMUYScCWexldGPmC3";
+                    if (!(userID.equals(dentistID))){
+                        Intent i = new Intent(MainActivity.this, UserProfile.class);
+                        startActivity(i);
+                        finish();
+                    } else {
+                        Intent i = new Intent(MainActivity.this, DentistProfile.class);
+                        startActivity(i);
+                        finish();
+                    }
                 } else {
                     Intent intent = new Intent(MainActivity.this, MyLoginActivity.class);
                     startActivity(intent);

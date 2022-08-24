@@ -81,32 +81,16 @@ public class MyLoginActivity extends AppCompatActivity {
                         if (user.isEmailVerified()) {
                             FirebaseUser userF = mAuth.getCurrentUser();
                             String userID = userF.getUid();
-                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(userID);
-
-                            reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                    UserClass userProfile = snapshot.getValue(UserClass.class);
-                                    String un = userProfile.username;
-                                    String dentistUN = "yourappdentist";
-                                    if (!(un.equals(dentistUN))){
-                                        Intent i = new Intent(MyLoginActivity.this, UserProfile.class);
-                                        startActivity(i);
-                                        finish();
-                                    } else {
-                                        Intent i = new Intent(MyLoginActivity.this, DentistProfile.class);
-                                        startActivity(i);
-                                        finish();
-                                    }
-                                    progressBar.setVisibility(View.GONE);
-                                    Toast.makeText(MyLoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
-                                }
-
-                                @Override
-                                public void onCancelled(@NonNull DatabaseError error) {
-                                    Toast.makeText(MyLoginActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
-                                }
-                            });
+                            String dentistID = "ARZWrJlFEgToMUYScCWexldGPmC3";
+                            if (!(userID.equals(dentistID))){
+                                Intent i = new Intent(MyLoginActivity.this, UserProfile.class);
+                                startActivity(i);
+                                finish();
+                            } else {
+                                Intent i = new Intent(MyLoginActivity.this, DentistProfile.class);
+                                startActivity(i);
+                                finish();
+                            }
 
                         } else {
                             user.sendEmailVerification();

@@ -111,7 +111,8 @@ public class UserProfile extends AppCompatActivity {
     }
 
     public void chat(View view) {
-
+        Intent i = new Intent(UserProfile.this, ChatMain.class);
+        startActivity(i);
     }
 
     public void tips(View view) {

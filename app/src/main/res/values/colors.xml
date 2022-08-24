@@ -14,5 +14,7 @@
     <color name="mygrey">#C0C0C0</color>
     <color name="mydarkgrey">#696969</color>
     <color name="myclear">#0000ffff</color>
+    <color name="babyblue">#95B9C7</color>
+    <color name="babypink">#FAAFBA</color>
 
 </resources>

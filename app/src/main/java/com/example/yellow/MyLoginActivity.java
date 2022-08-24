@@ -104,7 +104,7 @@ public class MyLoginActivity extends AppCompatActivity {
 
                                 @Override
                                 public void onCancelled(@NonNull DatabaseError error) {
-
+                                    Toast.makeText(MyLoginActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
                                 }
                             });
 

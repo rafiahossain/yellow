@@ -77,7 +77,8 @@ public class DentistProfile extends AppCompatActivity {
     }
 
     public void chatList(View view) {
-
+        Intent i = new Intent(DentistProfile.this, ChatMain.class);
+        startActivity(i);
     }
 
     public void uploadTips(View view) {

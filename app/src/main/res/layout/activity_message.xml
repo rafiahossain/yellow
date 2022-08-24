@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".MessageActivity">
 
     <RelativeLayout
+        android:id="@+id/bar_layout"
         android:background="@color/mybuttonpinkdark"
         android:padding="20dp"
         android:layout_width="match_parent"
@@ -25,12 +27,53 @@
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Username"
             android:layout_toRightOf="@+id/profile_image"
             android:layout_toEndOf="@+id/profile_image"
             android:layout_marginLeft="10dp"
             android:layout_centerVertical="true"
             android:textSize="18sp"
             android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_below="@+id/bar_layout"
+        android:layout_above="@+id/bottom"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/text_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:layout_centerVertical="true"
+            android:background="@drawable/layout_bg"
+            android:textColorHint="@color/mybuttonpinkdark"
+            android:hint="Enter your message..."/>
+
+        <ImageView
+            android:id="@+id/btn_send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/myclear"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_send"
+            android:tint="@color/mybuttonpinkdark" />
 
     </RelativeLayout>
 

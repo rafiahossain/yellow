@@ -159,4 +159,8 @@ public class MessageActivity extends AppCompatActivity {
         });
     }
 
+    public void goBack(View view) {
+        finish();
+    }
+
 }

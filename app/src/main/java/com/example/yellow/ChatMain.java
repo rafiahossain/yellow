@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.yellow.Fragments.ChatsFragment;
 import com.example.yellow.Fragments.UsersFragment;
@@ -73,5 +74,9 @@ public class ChatMain extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return titles.get(position);
         }
+    }
+
+    public void goBack(View view) {
+        finish();
     }
 }

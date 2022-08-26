@@ -15,12 +15,25 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:onClick="goBack"
+            android:background="@color/myclear"
+            android:src="?attr/homeAsUpIndicator"
+            android:tint="@color/white"/>
+
+        <ImageView
             android:id="@+id/profile_image"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_profile"
+            android:layout_toEndOf="@+id/btn_back"
+            android:layout_toRightOf="@+id/btn_back"
             android:background="@color/myclear"
+            android:src="@drawable/ic_profile"
             android:tint="@color/white" />
 
         <TextView

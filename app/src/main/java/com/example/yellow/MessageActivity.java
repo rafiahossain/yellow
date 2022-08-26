@@ -59,9 +59,15 @@ public class MessageActivity extends AppCompatActivity {
         text_send = findViewById(R.id.text_send);
         btn_send = findViewById(R.id.btn_send);
 
-        intent = getIntent();
-        userid = intent.getStringExtra("userid");
         fuser = FirebaseAuth.getInstance().getCurrentUser();
+        String currentUserID = fuser.getUid();
+        String dentistID = "ARZWrJlFEgToMUYScCWexldGPmC3";
+        if (!(currentUserID.equals(dentistID))){
+            userid = dentistID;
+        } else {
+            intent = getIntent();
+            userid = intent.getStringExtra("userid");
+        }
 
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,15 +112,15 @@ public class MessageActivity extends AppCompatActivity {
         reference.child("Chats").push().setValue(hashMap);
 
         //add user to chat fragment
-        DatabaseReference chatRef = FirebaseDatabase.getInstance().getReference("Chatlist")
-                .child(fuser.getUid())
-                .child(userid);
+        DatabaseReference chatRefReceiver = FirebaseDatabase.getInstance().getReference("Chatlist")
+                .child(userid)
+                .child(fuser.getUid());
 
-        chatRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        chatRefReceiver.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (!snapshot.exists()){
-                    chatRef.child("id").setValue(userid);
+                    chatRefReceiver.child("id").setValue(fuser.getUid());
                 }
             }
 

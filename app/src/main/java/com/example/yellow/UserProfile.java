@@ -111,7 +111,7 @@ public class UserProfile extends AppCompatActivity {
     }
 
     public void chat(View view) {
-        Intent i = new Intent(UserProfile.this, ChatMain.class);
+        Intent i = new Intent(UserProfile.this, MessageActivity.class);
         startActivity(i);
     }
 

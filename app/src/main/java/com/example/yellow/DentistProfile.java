@@ -82,7 +82,8 @@ public class DentistProfile extends AppCompatActivity {
     }
 
     public void uploadTips(View view) {
-
+        Intent i = new Intent(DentistProfile.this, VideosActivity.class);
+        startActivity(i);
     }
 
 }

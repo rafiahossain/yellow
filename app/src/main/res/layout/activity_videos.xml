@@ -17,6 +17,7 @@
         android:clickable="true"
         android:onClick="addVideo"
         android:src="@drawable/ic_add"
+        android:tooltipText="Upload Video"
         app:rippleColor="@color/mybuttonpinkmedium"
         android:tintMode="@color/white"/>
 

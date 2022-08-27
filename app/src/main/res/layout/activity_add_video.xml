@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     tools:context=".AddVideoActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/home"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -17,7 +16,7 @@
         android:layout_margin="20dp"
         android:clickable="true"
         android:onClick="goBack"
-        android:src="@drawable/ic_home"
+        android:src="?attr/homeAsUpIndicator"
         android:tintMode="@color/white"
         app:rippleColor="@color/mybuttonpinkmedium" />
 
@@ -25,7 +24,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_margin="10dp"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center_horizontal"
@@ -34,16 +33,45 @@
         android:textColor="@color/mybuttonpinkdark"
         android:textSize="20sp" />
 
+    <RelativeLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/title">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/pickVideoFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:clickable="true"
+            android:src="@drawable/ic_video_lib"
+            android:tintMode="@color/white"
+            android:tooltipText="Select Video"
+            app:rippleColor="@color/mybuttonpinkmedium"
+            android:layout_alignParentRight="true" />
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </RelativeLayout>
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/titleEt"
+        android:id="@+id/titleBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp"
+        android:paddingHorizontal="10dp"
+        android:layout_below="@+id/videoLayout"
         android:hint="Enter title"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName|textCapSentences"/>
@@ -51,10 +79,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/trimesterBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_below="@+id/titleEt"
+        android:layout_marginTop="5dp"
+        android:paddingHorizontal="10dp"
+        android:layout_below="@+id/titleBox"
         android:hint="Trimester (that the content is about)"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
@@ -66,5 +96,13 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Button
+        android:id="@+id/uploadVideoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trimesterBox"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Upload" />
 
 </RelativeLayout>

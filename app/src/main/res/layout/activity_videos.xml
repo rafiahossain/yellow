@@ -16,8 +16,9 @@
         android:layout_marginHorizontal="20dp"
         android:clickable="true"
         android:onClick="addVideo"
-        android:src="@android:drawable/ic_input_add"
-        app:rippleColor="@color/mybuttonpink" />
+        android:src="@drawable/ic_add"
+        app:rippleColor="@color/mybuttonpinkmedium"
+        android:tintMode="@color/white"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/home"
@@ -30,6 +31,7 @@
         android:clickable="true"
         android:onClick="goBack"
         android:src="@drawable/ic_home"
-        app:rippleColor="@color/mybuttonpink" />
+        app:rippleColor="@color/mybuttonpinkmedium"
+        android:tintMode="@color/white"/>
 
 </RelativeLayout>

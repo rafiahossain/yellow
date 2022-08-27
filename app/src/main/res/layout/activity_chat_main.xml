@@ -34,7 +34,8 @@
             android:clickable="true"
             android:onClick="goBack"
             android:src="@drawable/ic_home"
-            app:rippleColor="@color/mybuttonpink"/>
+            app:rippleColor="@color/mybuttonpinkmedium"
+            android:tintMode="@color/white"/>
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"

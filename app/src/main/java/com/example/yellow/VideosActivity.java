@@ -69,9 +69,4 @@ public class VideosActivity extends AppCompatActivity {
     public void goBack(View view) {
         finish();
     }
-
-    public void addVideo(View view) {
-        Intent i = new Intent(VideosActivity.this, AddVideoActivity.class);
-        startActivity(i);
-    }
 }

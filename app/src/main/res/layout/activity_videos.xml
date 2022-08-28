@@ -7,21 +7,6 @@
     tools:context=".VideosActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addVid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_above="@+id/home"
-        android:layout_marginHorizontal="20dp"
-        android:clickable="true"
-        android:onClick="addVideo"
-        android:src="@drawable/ic_add"
-        android:tooltipText="Upload Video"
-        app:rippleColor="@color/mybuttonpinkmedium"
-        android:tintMode="@color/white"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,6 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/row_video"/>
+        tools:listitem="@layout/row_video" />
 
 </RelativeLayout>

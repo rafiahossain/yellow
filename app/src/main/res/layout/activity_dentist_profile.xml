@@ -90,7 +90,7 @@
                 android:layout_height="125dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:onClick="chatList"
+                android:onClick="watchVideos"
                 app:cardBackgroundColor="@color/mybuttonpink"
                 app:cardElevation="20dp">
 
@@ -103,25 +103,25 @@
                         android:layout_width="30dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/ic_chat" />
+                        android:src="@drawable/ic_video_lib" />
 
                     <TextView
-                        android:id="@+id/chat"
+                        android:id="@+id/watch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/rammetto_one"
-                        android:text="Chat"
+                        android:text="Watch"
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/chat_desc"
+                        android:id="@+id/watch_desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/chat"
+                        android:layout_below="@+id/watch"
                         android:layout_centerHorizontal="true"
                         android:includeFontPadding="false"
-                        android:text="User Questions"
+                        android:text="Uploads"
                         android:textSize="20sp" />
 
                 </RelativeLayout>
@@ -167,6 +167,57 @@
                         android:layout_centerHorizontal="true"
                         android:includeFontPadding="false"
                         android:text="Video Tips"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-40dp"
+            android:padding="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:onClick="chatList"
+                app:cardBackgroundColor="@color/mybuttonpink"
+                app:cardElevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_chat" />
+
+                    <TextView
+                        android:id="@+id/chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/rammetto_one"
+                        android:text="Chat"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/chat_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/chat"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="User Questions"
                         android:textSize="20sp" />
 
                 </RelativeLayout>

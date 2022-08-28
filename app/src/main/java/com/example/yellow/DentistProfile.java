@@ -76,13 +76,18 @@ public class DentistProfile extends AppCompatActivity {
         finish();
     }
 
-    public void chatList(View view) {
-        Intent i = new Intent(DentistProfile.this, ChatMain.class);
+    public void watchVideos(View view) {
+        Intent i = new Intent(DentistProfile.this, VideosActivity.class);
         startActivity(i);
     }
 
     public void uploadTips(View view) {
-        Intent i = new Intent(DentistProfile.this, VideosActivity.class);
+        Intent i = new Intent(DentistProfile.this, AddVideoActivity.class);
+        startActivity(i);
+    }
+
+    public void chatList(View view) {
+        Intent i = new Intent(DentistProfile.this, ChatMain.class);
         startActivity(i);
     }
 

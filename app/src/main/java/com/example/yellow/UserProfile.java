@@ -116,7 +116,8 @@ public class UserProfile extends AppCompatActivity {
     }
 
     public void tips(View view) {
-
+        Intent i = new Intent(UserProfile.this, VideosActivity.class);
+        startActivity(i);
     }
 
 }

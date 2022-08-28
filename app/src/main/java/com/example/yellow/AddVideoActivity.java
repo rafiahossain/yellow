@@ -326,7 +326,6 @@ public class AddVideoActivity extends AppCompatActivity {
 
     //Return to previous page button
     public void goBack(View view) {
-        Intent intent = new Intent(AddVideoActivity.this, DentistProfile.class);
-        startActivity(intent);
+        finish();
     }
 }

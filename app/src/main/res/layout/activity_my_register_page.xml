@@ -106,7 +106,7 @@
                 android:ems="10"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:hint="Start date of pregnancy" />
+                android:hint="First day of last menstrual period" />
 
             <Button
                 android:id="@+id/btnregister"

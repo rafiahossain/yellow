@@ -35,4 +35,11 @@
         app:rippleColor="@color/mybuttonpinkmedium"
         android:tintMode="@color/white"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/videosRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_video"/>
+
 </RelativeLayout>

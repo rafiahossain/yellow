@@ -23,17 +23,6 @@ VI.	To develop a module where users can view all content uploaded by the dentist
 
 ---
 
-### Email Verification:
-
-<img width="588" height="215" alt="image" src="https://github.com/user-attachments/assets/e1880cd2-5c49-4fa0-acac-8bb8fc4ee26e" />
-<img width="314" height="238" alt="image" src="https://github.com/user-attachments/assets/6ae692d0-32d7-495f-a19c-f24e20ef3a5b" />
-
-### Resetting Password:
-
-<img width="585" height="219" alt="image" src="https://github.com/user-attachments/assets/930b9b28-7c18-48dd-affd-58f767498597" />
-
----
-
 ### Normal user profile, Chat (with dentist), Tips (Did you know?):
 
 <img width="293" height="574" alt="image" src="https://github.com/user-attachments/assets/705f48e6-a27b-44eb-a8b6-9c665bebe02b" />
@@ -60,6 +49,17 @@ VI.	To develop a module where users can view all content uploaded by the dentist
 <img width="228" height="441" alt="image" src="https://github.com/user-attachments/assets/64ce3ebe-07e4-4922-9866-d25a40f15717" />
 <img width="212" height="438" alt="image" src="https://github.com/user-attachments/assets/50ec693b-b042-40ee-85f7-842e4e02f6bd" />
 <img width="228" height="437" alt="image" src="https://github.com/user-attachments/assets/5e6da5e4-2311-41f7-9606-166eee7fda08" />
+
+---
+
+### Email Verification:
+
+<img width="588" height="215" alt="image" src="https://github.com/user-attachments/assets/e1880cd2-5c49-4fa0-acac-8bb8fc4ee26e" />
+<img width="314" height="238" alt="image" src="https://github.com/user-attachments/assets/6ae692d0-32d7-495f-a19c-f24e20ef3a5b" />
+
+### Resetting Password:
+
+<img width="585" height="219" alt="image" src="https://github.com/user-attachments/assets/930b9b28-7c18-48dd-affd-58f767498597" />
 
 ---
 
